@@ -11,6 +11,7 @@ import { AdminLayout } from "../layouts/adminLayout";
 import { HomeLayout } from "../layouts/homeLayout";
 import { CreateProduct } from "../pages/admin/products/CreateProduct";
 import { EditProduct } from "../pages/admin/products/EditProduct";
+import { Shoplayout } from "../layouts/homeLayout/shoplayout";
 
 
 
@@ -21,7 +22,11 @@ export const routes = [
       { id: 1, path: "", element: HomePage },
       { id: 2, path: "checkout", element: CheckoutPage },
       { id: 3, path:"contact" , element: ContactPage},
-      { id: 4 , path:"shop" , element: ShopPage},
+      { id: 4 , path:"shop" , element: Shoplayout, children:[
+      { id: 1, path: "", element: ShopPage },
+      { id: 2, path: "mens", element: CheckoutPage },
+      { id: 3, path:"womens" , element: ContactPage},
+      ]},
       { id: 5 , path:"shopDetail/:id" , element: ShopDetailPage},
       { id: 6 , path:"shoppingCart" , element: ShoppingCartPage},
   ] },
