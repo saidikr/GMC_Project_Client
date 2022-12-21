@@ -4,9 +4,8 @@ import { Footer } from "../../components/footer"
 import { SideBar } from "../../components/SideBar"
 import React from 'react'
 import { useLocation } from 'react-router-dom';
-
-import { Compare } from '../helper/compreUrlPath';
-import { Outlet,Link } from "react-router-dom"
+import { Compare } from "../../helper/compreUrlPath"
+import { Link } from "react-router-dom"
 
 
 
@@ -14,7 +13,6 @@ export const Shoplayout = () => {
   const path = useLocation();
     return (
         <div>
-        <Header/>
         <div className='grid grid-cols-4'>
             <div>
                 <div className='bg-site-color w-52 side-Bar h-full sticky top-0 pb-10'>
@@ -29,7 +27,7 @@ export const Shoplayout = () => {
                     : "mb-0 p-3 hover:text-nav-top"
                 }
               >
-                <Link to="/" className="block">
+                <Link to="/shop" className="block">
                   all
                 </Link>
               </p>
@@ -40,7 +38,7 @@ export const Shoplayout = () => {
                     : "mb-0 p-3 hover:text-nav-top"
                 }
               >
-                <Link to="/mens" className="block">
+                <Link to="/shop/mens" className="block">
                   Mens's Clothes
                 </Link>
               </p>
@@ -52,7 +50,7 @@ export const Shoplayout = () => {
                     : "mb-0 p-3 hover:text-nav-top"
                 }
               >
-                <Link to="/womens" className="block">
+                <Link to="/shop/womens" className="block">
                   Women's Clothes
                 </Link>
               </p>
@@ -60,7 +58,7 @@ export const Shoplayout = () => {
           </div>
         </div>
             </div>
-            <div className='col-span-3'>    <Outlet/></div>
+            <div className='col-span-3'><Outlet/></div>
         </div>
         <Footer/>
         </div>
