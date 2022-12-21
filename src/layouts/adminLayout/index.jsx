@@ -38,7 +38,7 @@ export const AdminLayout = () => {
                 }
               >
                 <Link to="/admin/products" className="block">
-                  Posts
+                  Products
                 </Link>
               </p>
               <p className="mt-10 mb-0 p-3">

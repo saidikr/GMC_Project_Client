@@ -11,7 +11,7 @@ export const Compare = (text, current) => {
     /*window.location.pathname*/ current === text ||
     current === `${text}/create` ||
     current === `${text}/edit/${id}`||
-    current === `${text}/${id}`
+    current === `${text}/${id}` 
   ) {
     return true;
   } else {

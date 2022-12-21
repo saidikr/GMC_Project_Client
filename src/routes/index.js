@@ -12,6 +12,10 @@ import { HomeLayout } from "../layouts/homeLayout";
 import { CreateProduct } from "../pages/admin/products/CreateProduct";
 import { EditProduct } from "../pages/admin/products/EditProduct";
 import { Shoplayout } from "../layouts/homeLayout/shoplayout";
+import { MensProductsCardsShop } from "../components/ProductCardsByCategory/MensProductsCardsShop";
+import { WomensProductsCardsShop } from "../components/ProductCardsByCategory/WomensProductsCardsShop";
+import { ElectronicsProductsCardsShop } from "../components/ProductCardsByCategory/ElectronicsProductsCardsShop";
+import { JeweleryProductsCardsShop } from "../components/ProductCardsByCategory/JeweleryProductsCardsShop";
 
 
 
@@ -23,10 +27,12 @@ export const routes = [
       { id: 2, path: "checkout", element: CheckoutPage },
       { id: 3, path:"contact" , element: ContactPage},
       { id: 4 , path:"shop" , element: Shoplayout, children:[
-      { id: 1, path: "", element: ShopPage },
-      { id: 2, path: "mens", element: CheckoutPage },
-      { id: 3, path:"womens" , element: ContactPage},
-      ]},
+      { id: 7, path: "", element: ShopPage },
+      { id: 8, path: "mens", element: MensProductsCardsShop },
+      { id: 9, path: "womens" , element: WomensProductsCardsShop},
+      { id: 10, path: "electronics" , element: ElectronicsProductsCardsShop},
+      { id: 11, path: "jewelery" , element: JeweleryProductsCardsShop},
+    ]},
       { id: 5 , path:"shopDetail/:id" , element: ShopDetailPage},
       { id: 6 , path:"shoppingCart" , element: ShoppingCartPage},
   ] },

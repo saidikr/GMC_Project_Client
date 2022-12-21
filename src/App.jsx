@@ -32,11 +32,23 @@ function App() {
                   }
                 >
                   {route.children.map((child) => (
+                    child.path === "shop" 
+                    ?(<Route path="shop" element={<child.element/>}>
+                      {child.children.map((child2)=>(
+                      <Route
+                      key={child2.id}
+                      path={child2.path}
+                      element={<child2.element/>}
+                    />
+                      )
+                      )}
+                    </Route>)
+                    :(
                     <Route
                       key={child.id}
                       path={child.path}
-                      element={<child.element />}
-                    />
+                      element={<child.element/>}
+                    />)
                   ))}
                 </Route>
               )}

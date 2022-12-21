@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import { Compare } from '../helper/compreUrlPath'
-import "./cc.css"
+import { Compare2 } from '../helper/compare2'
 
 export const Navbar2 = () => {
     const path = useLocation();
@@ -25,7 +25,7 @@ export const Navbar2 = () => {
             <Link className={Compare("/", path.pathname)?"inline-block py-2 px-4 no-underline bg-white rounded-3xl":"inline-block py-2 px-4 no-underline hover:text-white"} aria-current="page" to="/">Home</Link>
           </li>
           <li className>
-            <Link className={Compare("/shop", path.pathname)?"inline-block py-2 px-4 no-underline rounded-3xl bg-white":"inline-block py-2 px-4 no-underline hover:text-white"} to="shop">Shop</Link>
+            <Link className={Compare2("/shop", path.pathname)?"inline-block py-2 px-4 no-underline rounded-3xl bg-white":"inline-block py-2 px-4 no-underline hover:text-white"} to="shop">Shop</Link>
           </li>
           <li className>
             <Link className={Compare("/shopDetail", path.pathname)?"inline-block py-2 px-4 no-underline rounded-3xl bg-white":"inline-block py-2 px-4 no-underline hover:text-white"} >Shop Details</Link>

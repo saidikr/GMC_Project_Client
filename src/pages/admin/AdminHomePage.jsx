@@ -14,19 +14,8 @@ const AdminHomePage = () => {
 
 const {loading,error,data}=useFetch("/productcount")
 
-const [data2, setdata2] = useState([{name:"men's clothes",value:3},
-      {name:"women's clothes",value:2},
-      {name:"jewelery",value:3},
-      {name:"electronics",value:2},]);
 
-  const onload=()=>{
-      setdata2([
-            {name:"men's clothes",value:data[0]},
-            {name:"women's clothes",value:data[1]},
-            {name:"jewelery",value:[2]},
-            {name:"electronics",value:data[3]},
-          ])
-  }
+//data name:createdAt 
 
 const data1 = [
   {
@@ -88,6 +77,11 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
     </text>
   );
 };
+if(data){
+  const data2=[{name:"men's clothes",value:data[0]},
+              {name:"women's clothes",value:data[1]},
+              {name:"jewelery",value:data[2]},
+              {name:"electronics",value:data[3]},]
   return (
     <>
     <h1 className='p-3 font-semibold text-4xl w-full text-center block'>Administrator</h1>
@@ -119,7 +113,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
         {loading && <Loading />}
         {error && <ErrorFetch message="Error while fetchin productCount " /> }
         {!error && !loading && data && (
-        <div onLoad={()=>onload()}>
+        <div>
           <PieChart width={400} height={400}>
           <Pie
             data={data2}
@@ -142,6 +136,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
     </div>
     </>
   )
+  }
 }
 
 export default AdminHomePage

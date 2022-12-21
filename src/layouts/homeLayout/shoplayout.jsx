@@ -17,12 +17,12 @@ export const Shoplayout = () => {
             <div>
                 <div className='bg-site-color w-52 side-Bar h-full sticky top-0 pb-10'>
           <div className='p-1'>
-            <h5 className="text-black p-3 font-semibold">Category</h5>
+            <h5 className="text-black mt-20 p-3 font-semibold">Category</h5>
             
-            <div className="h-full mt-20 sidebar-links">
+            <div className="h-full  sidebar-links">
               <p
                 className={
-                  Compare("/admin/products", path.pathname)
+                  Compare("/shop", path.pathname)
                     ? "mb-0 p-3 bg-nav-top"
                     : "mb-0 p-3 hover:text-nav-top"
                 }
@@ -33,7 +33,7 @@ export const Shoplayout = () => {
               </p>
               <p
                 className={
-                  Compare("/", path.pathname)
+                  Compare("/shop/mens", path.pathname)
                     ? "mb-0 p-3 bg-nav-top"
                     : "mb-0 p-3 hover:text-nav-top"
                 }
@@ -42,10 +42,10 @@ export const Shoplayout = () => {
                   Mens's Clothes
                 </Link>
               </p>
-
+                
               <p
                 className={
-                  Compare("/admin/products", path.pathname)
+                  Compare("/shop/womens", path.pathname)
                     ? "mb-0 p-3 bg-nav-top"
                     : "mb-0 p-3 hover:text-nav-top"
                 }
@@ -54,13 +54,34 @@ export const Shoplayout = () => {
                   Women's Clothes
                 </Link>
               </p>
+                            <p
+                className={
+                  Compare("/shop/electronics", path.pathname)
+                    ? "mb-0 p-3 bg-nav-top"
+                    : "mb-0 p-3 hover:text-nav-top"
+                }
+              >
+                <Link to="/shop/electronics" className="block">
+                  Electronics
+                </Link>
+              </p>
+                            <p
+                className={
+                  Compare("/shop/jewelery", path.pathname)
+                    ? "mb-0 p-3 bg-nav-top"
+                    : "mb-0 p-3 hover:text-nav-top"
+                }
+              >
+                <Link to="/shop/jewelery" className="block">
+                  Jewelery
+                </Link>
+              </p>
             </div>
           </div>
         </div>
             </div>
             <div className='col-span-3'><Outlet/></div>
         </div>
-        <Footer/>
         </div>
   )
 }
