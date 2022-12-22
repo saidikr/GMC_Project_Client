@@ -52,7 +52,7 @@ const getTotalQuantity = () => {
             </div>
             <div className="md:w-1/3 pr-4 pl-4 mb-5">
                 <h5 className="font-bold text-gray-900 mb-4">Newsletter</h5>
-                <form action>
+                <form>
                 <div className="mb-4">
                     <input type="text" className="block appearance-none w-full px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded py-4" placeholder="Your Name" required="required" />
                 </div>
@@ -74,7 +74,7 @@ const getTotalQuantity = () => {
             </p>
         </div>
         <div className="flex justify-end pr-4 xl:px-0 text-end md:text-right ">
-            <img className="h-5" src={img} alt />
+            <img className="h-5" src={img} alt="no image" />
         </div>
         </div>
 

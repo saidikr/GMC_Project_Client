@@ -7,9 +7,9 @@ import { SideBar } from "../../components/SideBar"
 export const HomeLayout=({children})=>{
     return(
         <div>
-        <Header/>
-        <Outlet/>
-        <Footer/>
+        <Header key='1'/>
+        <Outlet key='2'/>
+        <Footer key='3'/>
         </div>
     )
 }

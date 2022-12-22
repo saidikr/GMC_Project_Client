@@ -16,7 +16,7 @@ export const Navbar2 = () => {
       </button>
       <div className="flex-grow items-center" id="navbarNavDropdown">
         <ul className="flex flex-wrap list-reset pl-0 mb-0">
-          <li className>
+          <li>
                 {/* {
                   Compare("/admin", path.pathname)
                     ? "mb-0 p-3 bg-nav-top"
@@ -24,13 +24,13 @@ export const Navbar2 = () => {
                 } */}
             <Link className={Compare("/", path.pathname)?"inline-block py-2 px-4 no-underline bg-white rounded-3xl":"inline-block py-2 px-4 no-underline hover:text-white"} aria-current="page" to="/">Home</Link>
           </li>
-          <li className>
+          <li >
             <Link className={Compare2("/shop", path.pathname)?"inline-block py-2 px-4 no-underline rounded-3xl bg-white":"inline-block py-2 px-4 no-underline hover:text-white"} to="shop">Shop</Link>
           </li>
-          <li className>
+          <li >
             <Link className={Compare("/Cart", path.pathname)?"inline-block py-2 px-4 no-underline rounded-3xl bg-white":"inline-block py-2 px-4 no-underline hover:text-white"} to="Cart">Shpping Cart</Link>
           </li>
-          <li className>
+          <li >
             <Link className={Compare("/contact", path.pathname)?"inline-block py-2 px-4 no-underline rounded-3xl bg-white":"inline-block py-2 px-4 no-underline hover:text-white"} to="contact">Contact</Link>
           </li>
         </ul>

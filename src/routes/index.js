@@ -6,7 +6,6 @@ import ContactPage from "../pages/contact";
 import ShopPage from "../pages/shop";
 import ShopDetailPage from "../pages/shopDetail";
 import LoginPage from "../pages/auth/login";
-import ShoppingCartPage from "../pages/shoppingCart";
 import { AdminLayout } from "../layouts/adminLayout";
 import { HomeLayout } from "../layouts/homeLayout";
 import { CreateProduct } from "../pages/admin/products/CreateProduct";
@@ -35,7 +34,6 @@ export const routes = [
       { id: 11, path: "jewelery" , element: JeweleryProductsCardsShop},
     ]},
       { id: 5 , path:"shopDetail/:id" , element: ShopDetailPage},
-      { id: 6 , path:"shoppingCart" , element: ShoppingCartPage},
       { id: 12 , path:"Cart" , element: Cart},
   ] },
   {

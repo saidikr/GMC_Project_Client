@@ -8,8 +8,8 @@ export const Vendor = () => {
     <div className="relative flex-grow max-w-full flex-1 px-4">
       <div className="grid grid-cols-6 gap-4">
         {vendors && vendors.map((el)=>(
-          <div className=" border p-6">
-          <img src={el} alt='vedor image' />
+          <div key={el.id} className=" border p-6">
+          <img src={el.img} alt='vedor image' />
         </div>            
         ))}
       </div>

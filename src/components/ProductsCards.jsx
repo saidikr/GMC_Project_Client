@@ -28,9 +28,9 @@ export const ProductsCards = () => {
             
             <div className="grid grid-cols-4 gap-4 text-center mt-20">
             {data.map((el) => (
-            <div class="max-w-sm rounded overflow-hidden shadow-lg" key={el._id} >
+            <div className="max-w-sm rounded overflow-hidden shadow-lg" key={el._id} >
             <div onClick={()=>navig(`/shopDetail/${el._id}`)}>
-            <img class="w-full" src={el.image} style={{height:"290px",width:"290px"}} alt="Sunset in the mountains"/>
+            <img className="w-full" src={el.image} style={{height:"290px",width:"290px"}} alt="Sunset in the mountains"/>
             <div className="flex-auto p-6 border-l border-r text-center pt-4 pb-3">
             <h6 className="truncate mb-3">{el.title}</h6>
             <div className="flex justify-center">
