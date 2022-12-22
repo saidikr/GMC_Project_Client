@@ -15,9 +15,8 @@ export const ProductsCardsShop = () => {
   const navig=useNavigate()
   return (
     <div className="container mx-auto sm:px-4 ">
-            <div className="text-center mb-4 p-5">
-              <h2 class="section-title px-5 mb-3"><span class="text-2xl px-2 mt-10">Stay Updated</span></h2>
-            <h2 className="section-title px-5"><span className="px-2 font-extrabold text-4xl mt-20">----Trandy Products----</span></h2>
+            <div className="text-center p-5">
+              <h2 class="section-title px-5"><span class="text-2xl px-2 mt-10">Stay Updated</span></h2>
             </div>
         {loading && <Loading />}
         {error && <ErrorFetch message="error while fetching " />}
@@ -25,7 +24,7 @@ export const ProductsCardsShop = () => {
         {data && data.length === 0 && <h1>Not data to show</h1>}
           {!error && data && (
             
-            <div class="grid grid-cols-4 gap-4 text-center mt-20">
+            <div class="grid grid-cols-3 gap-4 text-center mt-20">
               {data.map((el) => (
                 
             <div onClick={()=>navig(`/shopDetail/${el._id}`)} class="max-w-sm rounded overflow-hidden shadow-lg" key={el._id} >

@@ -1,8 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux';
 
 
 export const Navbar = () => {
+  const navigate=useNavigate();
+  const cart = useSelector((state) => state.cart)
+  const getTotalQuantity = () => {
+    let total = 0
+    cart.forEach(item => {
+      total += item.quantity
+    })
+    return total
+  }
   return (
     <>
     <nav className=' pt-2 bg-nav-top h-[40px] px-7 grid grid-cols-2 gap-1'>
@@ -43,18 +54,10 @@ export const Navbar = () => {
         <span className='flex flex-col justify-center h-10 text-center rounded px-2 '><i class="text-site-color hover:text-black fa fa-search"></i></span>
       </div>
       <div className='flex justify-end m-2 text-right' >
-        <span className='flex justify-center h-10 text-center rounded-xl border border-site-color p-2 mx-1'>
-              <div>
-                <i className="text-site-color fas fa-heart text-primary mx-1"></i>
-                <span className="badge text-site-color">0</span>
-              </div>
-        </span>
-        <span className='flex justify-center h-10 text-center rounded-xl border  border-site-color p-2 mx-1'>
-          <div>
-          <i className="text-site-color fas fa-shopping-cart text-primary mx-1" />
-          <span className="badge text-site-color">0</span>
+        <div className='shopping-cart flex justify-center h-10 text-center rounded-xl border bg-site-color  p-2 mx-1 text-white hover:text-black' onClick={() => navigate('/Cart')}>
+        <i className="fas fa-shopping-cart text-primary mx-1" />  
+        <p className="badge">{getTotalQuantity() || 0}</p>
         </div>
-        </span>
       </div>
     </nav>
     </>

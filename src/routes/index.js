@@ -16,6 +16,7 @@ import { MensProductsCardsShop } from "../components/ProductCardsByCategory/Mens
 import { WomensProductsCardsShop } from "../components/ProductCardsByCategory/WomensProductsCardsShop";
 import { ElectronicsProductsCardsShop } from "../components/ProductCardsByCategory/ElectronicsProductsCardsShop";
 import { JeweleryProductsCardsShop } from "../components/ProductCardsByCategory/JeweleryProductsCardsShop";
+import Cart from "../pages/Cart";
 
 
 
@@ -35,6 +36,7 @@ export const routes = [
     ]},
       { id: 5 , path:"shopDetail/:id" , element: ShopDetailPage},
       { id: 6 , path:"shoppingCart" , element: ShoppingCartPage},
+      { id: 12 , path:"Cart" , element: Cart},
   ] },
   {
     id: 2,

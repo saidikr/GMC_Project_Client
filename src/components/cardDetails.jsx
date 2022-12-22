@@ -17,7 +17,9 @@ export const CardDetails = () => {
         {data && data.length === 0 && <h1>Not data to show</h1>}
           {!error && data && (
             <div class="max-w-xl rounded overflow-hidden shadow-lg" key={data._id} >
-            <img class="w-full" src={data.image} alt="Sunset in the mountains"/>
+            <div className='w-full flex justify-center'>
+            <img src={data.image} alt="Sunset in the mountains" style={{height:"400px",width:"400px"}}/>
+            </div>
             <div className="flex-auto p-6 border-l border-r pt-4 pb-3">
             <h6 className="truncate ml-5 mb-3">{`Name : ${data.title}`}</h6>
             <h6 className="ml-5 mb-3">{`Description : ${data.description}`}</h6>

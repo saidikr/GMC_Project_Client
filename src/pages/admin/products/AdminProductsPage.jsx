@@ -16,7 +16,7 @@ const AdminProductsPage = () => {
       <div className="mt-5">
         <div className="">
           <button
-            className="inline-block text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-nav-top  hover:text-white pr-4 "
+            className="inline-block text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-slate-400  hover:bg-slate-500 pr-4 "
             onClick={() => navigate("/admin/product/create")}
           >
             AddOne

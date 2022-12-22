@@ -25,7 +25,7 @@ export const Category = () => {
       <div className="cat-item flex flex-col border mb-4" style={{padding: 30}}>
         <p className="text-right">{`${element.quantity} Products`}</p>
         <a href='' className="cat-img relative overflow-hidden mb-3">
-          <img className="max-w-full h-auto" src={element.img} alt={`${element.name} image`} />
+          <img className="max-w-full h-auto" style={{height:"250px",width:"313px"}}src={element.img} alt={`${element.name} image`} />
         </a>
         <h5 className="font-weight-semi-bold m-0">{element.name}</h5>
       </div>

@@ -28,7 +28,7 @@ export const Navbar2 = () => {
             <Link className={Compare2("/shop", path.pathname)?"inline-block py-2 px-4 no-underline rounded-3xl bg-white":"inline-block py-2 px-4 no-underline hover:text-white"} to="shop">Shop</Link>
           </li>
           <li className>
-            <Link className={Compare("/shopDetail", path.pathname)?"inline-block py-2 px-4 no-underline rounded-3xl bg-white":"inline-block py-2 px-4 no-underline hover:text-white"} >Shop Details</Link>
+            <Link className={Compare("/Cart", path.pathname)?"inline-block py-2 px-4 no-underline rounded-3xl bg-white":"inline-block py-2 px-4 no-underline hover:text-white"} to="Cart">Shpping Cart</Link>
           </li>
           <li className>
             <Link className={Compare("/contact", path.pathname)?"inline-block py-2 px-4 no-underline rounded-3xl bg-white":"inline-block py-2 px-4 no-underline hover:text-white"} to="contact">Contact</Link>
