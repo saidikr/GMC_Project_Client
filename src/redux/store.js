@@ -5,4 +5,4 @@ import { cartReducer } from "./cartSlice";
 
 export const store = configureStore({
   reducer: cartReducer
-})
+})git 
