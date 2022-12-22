@@ -25,7 +25,7 @@ export const ProductsCardsShop = () => {
         {data && data.length === 0 && <h1>Not data to show</h1>}
           {!error && data && (
             
-            <div class="grid grid-cols-3 gap-4 text-center mt-20">
+            <div className="grid grid-cols-3 gap-4 text-center mt-20">
               {data.map((el) => (
                 
             <div  className="max-w-sm rounded overflow-hidden shadow-lg" key={el._id} >

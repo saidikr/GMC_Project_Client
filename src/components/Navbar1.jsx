@@ -51,7 +51,7 @@ export const Navbar = () => {
       </div>
       <div className='flex justify-center m-2 border border-site-color rounded h-11'>
         <input type="search" id="default-search" className="w-full h-10 text-sm " placeholder="Search for products" required />
-        <span className='flex flex-col justify-center h-10 text-center rounded px-2 '><i class="text-site-color hover:text-black fa fa-search"></i></span>
+        <span className='flex flex-col justify-center h-10 text-center rounded px-2 '><i className="text-site-color hover:text-black fa fa-search"></i></span>
       </div>
       <div className='flex justify-end m-2 text-right' >
         <div className='shopping-cart flex justify-center h-10 text-center rounded-xl border bg-site-color  p-2 mx-1 text-white hover:text-black' onClick={() => navigate('/Cart')}>
