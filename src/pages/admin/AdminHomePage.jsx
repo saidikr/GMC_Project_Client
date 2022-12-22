@@ -5,8 +5,6 @@ import { LineChart,  PieChart, Pie,Line, XAxis,Cell, YAxis ,Tooltip, CartesianGr
 import { ErrorFetch } from '../../components/error-fetch';
 import { Loading } from '../../components/laoding';
 import useFetch from '../../hooks/useFetch';
-import { useEffect } from 'react';
-import { useState } from 'react';
 
 
 

@@ -31,23 +31,23 @@ const getTotalQuantity = () => {
             <div className="md:w-1/3 pr-4 pl-4 mb-5">
                 <h5 className="font-bold text-gray-900 mb-4">Quick Links</h5>
                 <div className="flex flex-col justify-start">
-                <a className="text-gray-900 mb-2" href="index.html"><i className="fa fa-angle-right mr-2" />Home</a>
-                <a className="text-gray-900 mb-2" href="shop.html"><i className="fa fa-angle-right mr-2" />Our Shop</a>
-                <a className="text-gray-900 mb-2" href="detail.html"><i className="fa fa-angle-right mr-2" />Shop Detail</a>
-                <a className="text-gray-900 mb-2" href="cart.html"><i className="fa fa-angle-right mr-2" />Shopping Cart</a>
-                <a className="text-gray-900 mb-2" href="checkout.html"><i className="fa fa-angle-right mr-2" />Checkout</a>
-                <a className="text-gray-900" href="contact.html"><i className="fa fa-angle-right mr-2" />Contact Us</a>
+                <a className="text-gray-900 mb-2" href="/"><i className="fa fa-angle-right mr-2" />Home</a>
+                <a className="text-gray-900 mb-2" href="/shop"><i className="fa fa-angle-right mr-2" />Our Shop</a>
+                <a className="text-gray-900 mb-2" href="/shop"><i className="fa fa-angle-right mr-2" />Shop Detail</a>
+                <a className="text-gray-900 mb-2" href="/Cart"><i className="fa fa-angle-right mr-2" />Shopping Cart</a>
+                <a className="text-gray-900 mb-2" href="/Cart"><i className="fa fa-angle-right mr-2" />Checkout</a>
+                <a className="text-gray-900" href="/contact"><i className="fa fa-angle-right mr-2" />Contact Us</a>
                 </div>
             </div>
             <div className="md:w-1/3 pr-4 pl-4 mb-5">
                 <h5 className="font-bold text-gray-900 mb-4">Quick Links</h5>
                 <div className="flex flex-col justify-start">
-                <a className="text-gray-900 mb-2" href="index.html"><i className="fa fa-angle-right mr-2" />Home</a>
-                <a className="text-gray-900 mb-2" href="shop.html"><i className="fa fa-angle-right mr-2" />Our Shop</a>
-                <a className="text-gray-900 mb-2" href="detail.html"><i className="fa fa-angle-right mr-2" />Shop Detail</a>
-                <a className="text-gray-900 mb-2" href="cart.html"><i className="fa fa-angle-right mr-2" />Shopping Cart</a>
-                <a className="text-gray-900 mb-2" href="checkout.html"><i className="fa fa-angle-right mr-2" />Checkout</a>
-                <a className="text-gray-900" href="contact.html"><i className="fa fa-angle-right mr-2" />Contact Us</a>
+                <a className="text-gray-900 mb-2" href="/"><i className="fa fa-angle-right mr-2" />Home</a>
+                <a className="text-gray-900 mb-2" href="/shop"><i className="fa fa-angle-right mr-2" />Our Shop</a>
+                <a className="text-gray-900 mb-2" href="/shop"><i className="fa fa-angle-right mr-2" />Shop Detail</a>
+                <a className="text-gray-900 mb-2" href="/Cart"><i className="fa fa-angle-right mr-2" />Shopping Cart</a>
+                <a className="text-gray-900 mb-2" href="/Cart"><i className="fa fa-angle-right mr-2" />Checkout</a>
+                <a className="text-gray-900" href="/contact"><i className="fa fa-angle-right mr-2" />Contact Us</a>
                 </div>
             </div>
             <div className="md:w-1/3 pr-4 pl-4 mb-5">
@@ -84,7 +84,7 @@ const getTotalQuantity = () => {
 
 
     </div>
-    <a href="#" className="fixed bottom-3 right-3 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-2 px-4 leading-normal no-underline bg-site-color text-black hover:text-white"><i className="fa fa-angle-double-up"></i></a>
+    <a href="#" className="transition-transform fixed bottom-3 right-3 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-2 px-4 leading-normal no-underline bg-site-color text-black hover:text-white"><i className="fa fa-angle-double-up"></i></a>
     <div className='flex justify-end m-2 text-right' >
         <div className='fixed bottom-2 left-3 shopping-cart flex justify-center h-14 w-15 bg-site-color text-center rounded-full border px-2 py-3 mx-1 text-black hover:text-white' onClick={() => navigate('/Cart')}>
         <i className="fas fa-shopping-cart text-primary m-1" />  
