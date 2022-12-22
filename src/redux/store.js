@@ -17,5 +17,12 @@ const persistConfig = {
 }
 const persistedReducer = persistReducer(persistConfig, cartReducer)
 export const store = configureStore({
-  reducer: cartReducer
+  reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 })
+export const persistor = persistStore(store)
