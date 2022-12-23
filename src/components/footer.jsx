@@ -2,6 +2,7 @@ import React from 'react'
 import img from '../assets/payments.png'
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import './header.css'
 
 export const Footer = () => {
     const navigate=useNavigate();
@@ -15,7 +16,7 @@ const getTotalQuantity = () => {
 }
     return (
     <>
-    <div className="flex flex-wrap bg-nav-top xl:px-12 pt-16 ">
+    <div className="flex flex-wrap headercolor xl:px-12 pt-16 ">
         <div className="lg:w-1/3 md:w-full pr-4 pl-4 mb-5 xl:pr-12">
             <div className='flex pb-5' >
             <a href=""><button className='py-2 px-4 text-4xl border font-bold text-site-color border-solid' >E</button></a>
@@ -84,9 +85,9 @@ const getTotalQuantity = () => {
 
 
     </div>
-    <a href="#" className="transition-transform fixed bottom-3 right-3 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-2 px-4 leading-normal no-underline bg-site-color text-black hover:text-white"><i className="fa fa-angle-double-up"></i></a>
+    <a href="#" className=" fixed bottom-3 right-3 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-2 px-4 leading-normal no-underline bg-site-color text-white"><i className="fa fa-angle-double-up"></i></a>
     <div className='flex justify-end m-2 text-right' >
-        <div className='fixed bottom-2 left-3 shopping-cart flex justify-center h-14 w-15 bg-site-color text-center rounded-full border px-2 py-3 mx-1 text-black hover:text-white' onClick={() => navigate('/Cart')}>
+        <div className='fixed bottom-2 left-3 shopping-cart flex justify-center h-12 w-15 bg-site-color text-center rounded border px-2 py-3 mx-1 text-white hover:cursor-pointer' onClick={() => navigate('/Cart')}>
         <i className="fas fa-shopping-cart text-primary m-1" />  
         <p className="badge">{getTotalQuantity() || 0}</p>
         </div>

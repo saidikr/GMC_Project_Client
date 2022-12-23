@@ -12,6 +12,10 @@
   text-transform: uppercase;
 }
 
+.btn{
+  background-color: #E6DDC4;
+}
+
 .form-label {
   margin: 10px 0;
   text-align: left;
@@ -61,8 +65,6 @@
 
   .form-label {
     margin: 0;
-    border: solid;
-    border-radius: 10px;
     
   }
 
@@ -87,5 +89,6 @@
 
   .form-submit {
     grid-area: submit;
+    background-color: #E6DDC4;
   }
 }

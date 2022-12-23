@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import useFetch from '../hooks/useFetch'
 import { ErrorFetch } from './error-fetch'
+import { Item } from './Item'
 import { Loading } from './laoding'
 
 
@@ -31,7 +32,12 @@ export const CardDetails = () => {
             </div>
             </div>
             <div className="py-3 px-6 border-t-1 flex justify-center bg-gray-100 ">
-                        <a href="" className="inline-block align-middle text-center select-none font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  text-gray-900 p-0"><i className="fas fa-shopping-cart text-site-color mr-1"></i>Add To Cart</a>
+                       <Item
+                        id={data._id}
+                        image={data.image}
+                        title={data.title}
+                        price={data.price} 
+                        />
             </div>
             </div>
 

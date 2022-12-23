@@ -29,9 +29,9 @@ const LoginPage = () => {
   };
 
   return (
-        <div className="container flex justify-center mt-40 mx-auto sm:px-4" >
-            <div className="md:w-1/2">
-                <div className="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300 shadow">
+        <div className="flex justify-center h-screen sm:px-4 bg-btn-color" >
+            <div className="w-1/3">
+                <div className="mt-40 relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300 shadow">
                     <div className="flex-auto p-6">
                         <h3 className="text-center font-semibold ">Login</h3>
                         <form onSubmit={handleSubmit(handleFormSubmit)}>
@@ -39,7 +39,7 @@ const LoginPage = () => {
                                 <label>Email</label>
                                 <input
                                     type="email"
-                                    className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded mt-3"
+className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded mt-3"
                                     placeholder="enter your email"
                                     {...register("email")}
                                 />

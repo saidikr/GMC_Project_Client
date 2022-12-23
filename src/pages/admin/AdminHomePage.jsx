@@ -84,7 +84,6 @@ if(data){
     <>
     <h1 className='p-3 font-semibold text-4xl w-full text-center block'>Administrator</h1>
     <div className='grid grid-cols-2 gap-4 py-20'>
-        
         <div>
         <ResponsiveContainer width="100%" height="100%">
         <LineChart
@@ -111,7 +110,7 @@ if(data){
         {loading && <Loading />}
         {error && <ErrorFetch message="Error while fetchin productCount " /> }
         {!error && !loading && data && (
-        <div>
+        <div className='text-center'>
           <PieChart width={400} height={400}>
           <Pie
             data={data2}
@@ -129,6 +128,7 @@ if(data){
           </Pie>
           <Tooltip/>
         </PieChart>
+        <h1 className='font-semibold'>percentage of quantities by category</h1>
         </div>
         )}
     </div>

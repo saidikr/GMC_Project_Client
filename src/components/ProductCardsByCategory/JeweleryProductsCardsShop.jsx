@@ -17,7 +17,7 @@ export const JeweleryProductsCardsShop = () => {
   return (
     <div className="container mx-auto sm:px-4 ">
             <div className="text-center p-5">
-              <h2 className="section-title px-5"><span className="text-2xl px-2 mt-10">Stay Updated</span></h2>
+              <h2 className="section-title px-5"><span className="font-semibold text-3xl px-2 mt-10">Jewerly</span></h2>
             </div>
         {loading && <Loading />}
         {error && <ErrorFetch message="error while fetching " />}
@@ -34,7 +34,7 @@ export const JeweleryProductsCardsShop = () => {
             <div className="flex-auto p-6 border-l border-r text-center pt-4 pb-3">
             <h6 className="truncate mb-3">{el.title}</h6>
             <div className="flex justify-center">
-            <h6>{el.price}</h6><h6 className="text-gray-700 ml-2"><del>{el.price}</del></h6>
+            <h6>{el.price} Da</h6><h6 className="text-gray-700 ml-2"><del>{el.price} Da</del></h6>
             </div>
             </div>
             </div>

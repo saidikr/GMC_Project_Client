@@ -11,10 +11,10 @@ const Info = () => (
     {/* <div className="info-details-container">{renderContactDetails()}</div>
     <div className="info-icons-container">{renderIcons()}</div> */}
     <div>
-            <p>Dolore erat dolor sit lorem vero amet. Sed sit lorem magna, ipsum no sit erat lorem et magna ipsum dolore amet erat.</p>
-            <p className="mb-2"><i className="fa fa-map-marker-alt text-site-color mr-3" />123 Street, New York, USA</p>
-            <p className="mb-2"><i className="fa fa-envelope text-site-color mr-3" />info@example.com</p>
-            <p className="mb-0"><i className="fa fa-phone-alt text-site-color mr-3" />+012 345 67890</p>
+            <p className='mb-2'>Dolore erat dolor sit lorem vero amet. Sed sit lorem magna, ipsum no sit erat lorem et magna ipsum dolore amet erat.</p>
+            <p className="mb-2"><i className="fa fa-map-marker-alt text-white mr-3 pr-1"/>123 Street, New York, USA</p>
+            <p className="mb-2"><i className="fa fa-envelope text-white mr-3" />info@example.com</p>
+            <p className="mb-2"><i className="fa fa-phone-alt text-white mr-3" />+012 345 67890</p>
     </div>
   </section>
 )

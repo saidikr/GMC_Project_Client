@@ -34,7 +34,7 @@ export const ProductsCards = () => {
             <div className="flex-auto p-6 border-l border-r text-center pt-4 pb-3">
             <h6 className="truncate mb-3">{el.title}</h6>
             <div className="flex justify-center">
-            <h6>{el.price}</h6><h6 className="text-gray-700 ml-2"><del>{el.price}</del></h6>
+            <h6>{el.price} Da</h6><h6 className="text-gray-700 ml-2"><del>{el.price} Da</del></h6>
             </div>
             </div>
             </div>

@@ -1,12 +1,16 @@
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { useState,useEffect } from 'react';
 import img1 from '../assets/carousel-1.jpg';
-import img2 from '../assets/carousel-2.jpg';
-import img3 from '../assets/carousel-1.jpg';
-import img4 from '../assets/carousel-2.jpg';
+import img2 from '../assets/320443029.png';
+import img3 from '../assets/5188208.jpg';
+import img4 from '../assets/luis.png';
+import img5 from '../assets/only.png';
+import img6 from '../assets/san.png';
+
+
 
 function Slider2() {
-  const images = [img1, img2, img3, img4];
+  const images = [img1, img2, img3, img4,img5,img6];
   const [activeSlide, setActiveSlide] = useState(1);
 
   const prevSliderHandler = (index) => {
@@ -21,7 +25,7 @@ function Slider2() {
 
   const nextSliderHandler = (index) => {
     if (index === images.length - 1) {
-      setActiveSlide(1);
+      setActiveSlide(0);
     } else if (index < images.length - 1) {
       setActiveSlide(activeSlide + 1);
     } else {
@@ -48,7 +52,7 @@ function Slider2() {
             }
           >
             <button
-              className='text-6xl border-2 border-black'
+              className='text-6xl'
               onClick={() => prevSliderHandler(index)}
             >
               <FiChevronLeft />
@@ -61,7 +65,7 @@ function Slider2() {
               />
             </div>
             <button
-              className='text-6xl border-2 border-black'
+              className='text-6xl'
               onClick={() => nextSliderHandler(index)}
             >
               <FiChevronRight />

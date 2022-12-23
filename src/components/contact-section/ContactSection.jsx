@@ -7,7 +7,7 @@ import './contact-section.css'
 
 const ContactSection = () => (
   <>
-    <div className="grid grid-cols-3">
+    <div className="grid grid-cols-3 bg-nav-top">
       <div className='col-span-2'><Form/></div>
       <div><Info /></div>
     </div>

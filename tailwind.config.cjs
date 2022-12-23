@@ -10,8 +10,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'nav-top': '#EDF1FF',
-        'site-color':'#D19C97',
+        'nav-top': '#678983',
+        'site-color':'#678983',
+        'btn-color':'#E6DDC4',
         //227C70 ver bleu
         //D19C97 pink
       },

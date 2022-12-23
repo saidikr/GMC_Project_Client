@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../header.css'
 import './form.css'
 
 const formInputs = [
@@ -25,28 +25,27 @@ const formInputs = [
 ]
 
 const Form = () => (
+  <>
   <form className="form">
-    <h2 className="form-h2">Send us a message</h2>
+    <h2 className="form-h2 font-semibold">Send us a message</h2>
 
     {formInputs.map(input => (
-      <label key={input.label} id={input.id} className="form-label">
-        {input.label}
-
+      <label key={input.id} id={input.id} className="form-label">
         {input.type === 'textarea' ? (
-          <textarea className="form-textarea" placeholder={input.placeholder} />
+          <textarea className="form-textarea" placeholder={input.label} />
         ) : (
           <input
             className="form-input "
             type={input.type}
-            placeholder={input.placeholder}
+            placeholder={input.label}
           />
         )}
       </label>
     ))}
-
-    <button className="form-submit align-middle text-center select-none  font-normal whitespace-no-wrap rounded  px-3 leading-normal no-underline bg  bg-site-color text-black hover:text-white block w-full border-0 py-3" type="submit">Send Message</button>
-    
+    <div className='form-submit relative'><button className="absolute right-5 text-center rounded px-3 bg-btn-color text-black py-3" type="submit">Send Message</button></div>
   </form>
-)
+      
+</>
+      )
 
 export default Form

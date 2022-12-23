@@ -12,17 +12,16 @@ export const AdminLayout = () => {
   const path = useLocation();
   return (
     
-      <div className="grid grid-cols-4 gap-1 h-screen">
-        <div className='bg-site-color w-52 side-Bar h-full sticky top-0 pb-10'>
-          <div className='p-1'>
-            <h5 className="text-black p-3 font-semibold">Admin Dashboard</h5>
-            
-            <div className="h-full mt-20 sidebar-links">
+      <div className="grid grid-cols-5 h-screen">
+        <div className='bg-site-color w-52 h-full'>
+          <div className=''>
+            <h5 className="text-black mt-10 p-3 font-semibold">Admin Dashboard</h5>
+            <div className="h-full mt-1">
               <p
                 className={
                   Compare("/admin", path.pathname)
-                    ? "mb-0 p-3 bg-nav-top"
-                    : "mb-0 p-3 hover:text-nav-top"
+                    ? "mb-0 p-3 bg-btn-color"
+                    : "mb-0 p-3 hover:text-white"
                 }
               >
                 <Link to="/admin" className="block">
@@ -33,8 +32,8 @@ export const AdminLayout = () => {
               <p
                 className={
                   Compare("/admin/products", path.pathname)
-                    ? "mb-0 p-3 bg-nav-top"
-                    : "mb-0 p-3 hover:text-nav-top"
+                    ? "mb-0 p-3 bg-btn-color"
+                    : "mb-0 p-3 hover:text-white"
                 }
               >
                 <Link to="/admin/products" className="block">
@@ -47,7 +46,7 @@ export const AdminLayout = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-3 mr-10"><Outlet/></div>
+        <div className="col-span-4"><Outlet/></div>
       </div>
       )
 }

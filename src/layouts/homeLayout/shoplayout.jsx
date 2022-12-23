@@ -1,7 +1,6 @@
 import { Header } from "../../components/Header"
 import { Outlet } from "react-router-dom"
-import { Footer } from "../../components/footer"
-import { SideBar } from "../../components/SideBar"
+import "../../components/header.css"
 import React from 'react'
 import { useLocation } from 'react-router-dom';
 import { Compare } from "../../helper/compreUrlPath"
@@ -17,14 +16,14 @@ export const Shoplayout = () => {
             <div>
                 <div className='bg-site-color w-52 side-Bar h-full sticky top-0 pb-10'>
           <div className='p-1'>
-            <h5 className="text-black mt-20 p-3 font-semibold">Category</h5>
+            <h5 className="text-black mt-5 p-3 font-semibold">Category</h5>
             
             <div className="h-full  sidebar-links">
               <p
                 className={
                   Compare("/shop", path.pathname)
-                    ? "mb-0 p-3 bg-nav-top"
-                    : "mb-0 p-3 hover:text-nav-top"
+                    ? "mb-0 p-3 headercolor"
+                    : "mb-0 p-3 hover:text-white"
                 }
               >
                 <Link to="/shop" className="block">
@@ -34,8 +33,8 @@ export const Shoplayout = () => {
               <p
                 className={
                   Compare("/shop/mens", path.pathname)
-                    ? "mb-0 p-3 bg-nav-top"
-                    : "mb-0 p-3 hover:text-nav-top"
+                    ? "mb-0 p-3 headercolor"
+                    : "mb-0 p-3 hover:text-white"
                 }
               >
                 <Link to="/shop/mens" className="block">
@@ -46,8 +45,8 @@ export const Shoplayout = () => {
               <p
                 className={
                   Compare("/shop/womens", path.pathname)
-                    ? "mb-0 p-3 bg-nav-top"
-                    : "mb-0 p-3 hover:text-nav-top"
+                    ? "mb-0 p-3 headercolor"
+                    : "mb-0 p-3 hover:text-white"
                 }
               >
                 <Link to="/shop/womens" className="block">
@@ -57,8 +56,8 @@ export const Shoplayout = () => {
                             <p
                 className={
                   Compare("/shop/electronics", path.pathname)
-                    ? "mb-0 p-3 bg-nav-top"
-                    : "mb-0 p-3 hover:text-nav-top"
+                    ? "mb-0 p-3 headercolor"
+                    : "mb-0 p-3 hover:text-white"
                 }
               >
                 <Link to="/shop/electronics" className="block">
@@ -68,8 +67,8 @@ export const Shoplayout = () => {
                             <p
                 className={
                   Compare("/shop/jewelery", path.pathname)
-                    ? "mb-0 p-3 bg-nav-top"
-                    : "mb-0 p-3 hover:text-nav-top"
+                    ? "mb-0 p-3 headercolor"
+                    : "mb-0 p-3 hover:text-white"
                 }
               >
                 <Link to="/shop/jewelery" className="block">
