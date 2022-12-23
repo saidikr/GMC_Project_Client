@@ -1,64 +1,21 @@
 
 import React from 'react';
 
-import { LineChart,  PieChart, Pie,Line, XAxis,Cell, YAxis ,Tooltip, CartesianGrid,  Legend, ResponsiveContainer } from 'recharts';
+import { BarChart,  PieChart, Pie,Bar, XAxis,Cell, YAxis ,Tooltip, CartesianGrid,  Legend, ResponsiveContainer } from 'recharts';
 import { ErrorFetch } from '../../components/error-fetch';
 import { Loading } from '../../components/laoding';
 import useFetch from '../../hooks/useFetch';
+import useFetch3 from '../../hooks/useFetch3';
 
 
 
 const AdminHomePage = () => {
 
 const {loading,error,data}=useFetch("/productcount")
+const {loading3,error3,data3}=useFetch3("/totalprices")
 
 
 //data name:createdAt 
-
-const data1 = [
-  {
-    name: 'Page A',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: 'Page B',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: 'Page C',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: 'Page D',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: 'Page E',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: 'Page F',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: 'Page G',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
 
 
 
@@ -75,21 +32,26 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
     </text>
   );
 };
-if(data){
-  const data2=[{name:"men's clothes",value:data[0]},
-              {name:"women's clothes",value:data[1]},
-              {name:"jewelery",value:data[2]},
-              {name:"electronics",value:data[3]},]
+if(data && data3){
+  const data2=[{name:data3[0]._id,value:data3[0].total},
+              {name:data3[1]._id,value:data3[1].total},
+              {name:data3[2]._id,value:data3[2].total},
+              {name:data3[3]._id,value:data3[3].total},];
+
+  const data1 = [{name: "Men",quantity: data[0],amt: 2400,},
+                {name: "Women",quantity: data[1],amt: 2210,},
+                {name: 'Electronics',quantity: data[2],amt: 2290,},
+                {name: 'Jewelery',quantity: data[3],amt: 2000,}];
   return (
     <>
-    <h1 className='p-3 font-semibold text-4xl w-full text-center block'>Administrator</h1>
-    <div className='grid grid-cols-2 gap-4 py-20'>
-        <div>
-        <ResponsiveContainer width="100%" height="100%">
-        <LineChart
+    <div className='grid grid-cols-2 gap-4 py-10'>
+        <div className='text-center'>
+          <ResponsiveContainer width={500} height={500}>
+        <BarChart
           width={500}
           height={300}
           data={data1}
+          
           margin={{
             top: 5,
             right: 30,
@@ -98,23 +60,23 @@ if(data){
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
+          <XAxis dataKey="name"  />
           <YAxis />
           <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-          </LineChart>
-          </ResponsiveContainer>
+          <Bar dataKey="quantity" fill="#8884d8" label={renderCustomizedLabel}/>
+        </BarChart>
+      </ResponsiveContainer>
+      <h1 className='font-semibold'>category quantity bar chart</h1>
         </div>
         {loading && <Loading />}
         {error && <ErrorFetch message="Error while fetchin productCount " /> }
         {!error && !loading && data && (
         <div className='text-center'>
-          <PieChart width={400} height={400}>
+          <div className=''>
+          <PieChart width={500} height={500}>
           <Pie
             data={data2}
-            cx="50%"
+            cx="55%"
             cy="50%"
             labelLine={false}
             label={renderCustomizedLabel}
@@ -128,7 +90,8 @@ if(data){
           </Pie>
           <Tooltip/>
         </PieChart>
-        <h1 className='font-semibold'>percentage of quantities by category</h1>
+                <h1 className='font-semibold'>percentage of total prices per category</h1>
+        </div>
         </div>
         )}
     </div>
