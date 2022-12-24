@@ -19,19 +19,19 @@ export const Navbar2 = () => {
         </div>
         <div >
           <div className="d-inline-flex justify-end text-right">
-          <a href='https://www.facebook.com' className="text-dark px-2">
+          <a href='https://www.facebook.com' target="blank" className="text-dark px-2">
             <i className="text-white fab fa-facebook-f" />
           </a>
-          <a href='https://www.twitter.com' className="text-dark px-2">
+          <a href='https://www.twitter.com' target="blank" className="text-dark px-2">
             <i className="text-white fab fa-twitter" />
           </a>
-          <a href='https://www.linkedin.com'  className="text-dark px-2">
+          <a href='https://www.linkedin.com' target="blank" className="text-dark px-2">
             <i className="text-white fab fa-linkedin-in" />
           </a>
-          <a href='https://www.instagram.com'  className="text-dark px-2">
+          <a href='https://www.instagram.com' target="blank" className="text-dark px-2">
             <i className="text-white fab fa-instagram" />
           </a>
-          <a href='https://www.youtube.com'  className="text-dark pl-2">
+          <a href='https://www.youtube.com' target="blank" className="text-dark pl-2">
             <i className="text-white fab fa-youtube" />
           </a>
         </div>

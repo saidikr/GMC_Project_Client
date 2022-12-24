@@ -10,6 +10,9 @@ import { Loading } from './laoding'
 export const CardDetails = () => {
     const params=useParams()
     const {data,loading,error}=useFetch(`/product/${params.id}`)
+    if(data){
+      var priceoff=data.price+data.price*25/100;
+    }
   return (
 <div className="m-5 container mx-auto sm:px-4 ">
         {loading && <Loading />}
@@ -22,13 +25,13 @@ export const CardDetails = () => {
             <img src={data.image} alt="Sunset in the mountains" style={{height:"400px",width:"400px"}}/>
             </div>
             <div className="flex-auto p-6 border-l border-r pt-4 pb-3">
-            <h6 className="truncate ml-5 mb-3">{`Name : ${data.title}`}</h6>
-            <h6 className="ml-5 mb-3">{`Description : ${data.description}`}</h6>
-            <h6 className="ml-5 mb-3">{`Category : ${data.category}`}</h6>
-            <h6 className="ml-5 mb-3">{`Rating : ${data.rating}`}</h6>
-            <h6 className="ml-5 mb-3">{`Quantity : ${data.quantity}`}</h6>
+            <h6 className="truncate ml-5 mb-3"><h6 className='font-semibold inline-block'>Name : </h6>{data.title}</h6>
+            <h6 className="ml-5 mb-3"><h6 className='font-semibold inline-block'>Description : </h6>{data.description}</h6>
+            <h6 className="ml-5 mb-3"><h6 className='font-semibold inline-block'>Category :  </h6>{data.category}</h6>
+            <h6 className="ml-5 mb-3"><h6 className='font-semibold inline-block'>Rating : </h6> {data.rating}</h6>
+            <h6 className="ml-5 mb-3"><h6 className='font-semibold inline-block'>Quantity : </h6> {data.quantity}</h6>
             <div className="flex ml-5">
-            <h6>{`Price : ${data.price}`}</h6><h6 className="text-gray-700 ml-2"><del>{data.price}</del></h6>
+            <h6 className='font-semibold inline-block'>Price : </h6> {data.price} <del className="text-gray-700 ml-2">{priceoff}</del>
             </div>
             </div>
             <div className="py-3 px-6 border-t-1 flex justify-center bg-gray-100 ">

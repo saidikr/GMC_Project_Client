@@ -5,6 +5,7 @@ import { Loading } from '../../../components/laoding';
 import { ErrorFetch } from '../../../components/error-fetch';
 import { formatDate } from '../../../helper/formatDate';
 import { deleteProduct } from '../../../service/product.service';
+import {format} from 'timeago.js'
 
 const AdminProductsPage = () => {
   const { data, loading, error } = useFetch("/products");
@@ -51,7 +52,7 @@ const AdminProductsPage = () => {
                       <td className='text-center border-r-2 border-b-2'>{item.category}</td>
                       <td className='text-center border-r-2 border-b-2'>{item.rating}</td>
                       <td className='text-center border-r-2 border-b-2'>{item.quantity}</td>
-                      <td className='text-center border-r-2 border-b-2'>{formatDate(item.createAt)}</td>
+                      <td className='text-center border-r-2 border-b-2'>{format(item.createAt)}</td>
                       <td className='flex justify-center align-middle '>
                         <a className=" my-20 py-5 px-2" onClick={()=>deleteProduct(item._id)}><i  className="h-9 w-9 cursor-pointer text-center text-white bg-red-600 py-2 rounded-xl fa fa-trash fa-2xl" aria-hidden="true"></i></a>                        
                         <a className=" my-20 py-5 px-2" onClick={()=>navigate(`/admin/product/edit/${item._id}`)}><i className="h-9 w-9 cursor-pointer text-center text-white bg-nav-top py-2 rounded-xl fa fa-edit fa-2xl"></i></a>
