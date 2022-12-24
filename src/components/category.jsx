@@ -9,10 +9,10 @@ import { useNavigate } from 'react-router-dom'
 export const Category = () => {
   const navigate=useNavigate();
 const Categorytab=[
-    {id:1,name:"Men's clothing",quantity:15,img:cat1,path:'mens'},
-    {id:2,name:"Women's clothing",quantity:10,img:cat2,path:'womens'},
-    {id:4,name:"Electronics",quantity:3,img:cat4,path:'electronics'},
-    {id:5,name:"Jewelery",quantity:2,img:cat3,path:'jewelery'},
+    {id:1,name:"Men's clothing",img:cat1,path:'mens'},
+    {id:2,name:"Women's clothing",img:cat2,path:'womens'},
+    {id:4,name:"Electronics",img:cat4,path:'electronics'},
+    {id:5,name:"Jewelery",img:cat3,path:'jewelery'},
     ]
 
   return (

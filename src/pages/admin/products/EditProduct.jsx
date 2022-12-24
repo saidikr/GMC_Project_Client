@@ -6,7 +6,6 @@ import {useForm} from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { productSchema } from '../../../helper/validation';
 import { editProduct } from '../../../service/product.service';
-import { ToastContainer } from 'react-toastify';
 import { useParams } from 'react-router-dom';
 
 export const EditProduct = () => {
@@ -90,7 +89,6 @@ export const EditProduct = () => {
             <button className='inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-site-color  hover:text-white' >Edit</button>
             </div>
         </form>
-        <ToastContainer />
     </div>
   )
 }

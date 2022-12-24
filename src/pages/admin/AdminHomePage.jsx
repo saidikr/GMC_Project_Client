@@ -4,18 +4,12 @@ import React from 'react';
 import { BarChart,  PieChart, Pie,Bar, XAxis,Cell, YAxis ,Tooltip, CartesianGrid,  Legend, ResponsiveContainer } from 'recharts';
 import { ErrorFetch } from '../../components/error-fetch';
 import { Loading } from '../../components/laoding';
-import useFetch from '../../hooks/useFetch';
 import useFetch3 from '../../hooks/useFetch3';
 
 
 
 const AdminHomePage = () => {
-
-const {loading,error,data}=useFetch("/productcount")
 const {loading3,error3,data3}=useFetch3("/totalprices")
-
-
-//data name:createdAt 
 
 
 
@@ -32,21 +26,17 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
     </text>
   );
 };
-if(data && data3){
-  const data2=[{name:data3[0]._id,value:data3[0].total},
-              {name:data3[1]._id,value:data3[1].total},
-              {name:data3[2]._id,value:data3[2].total},
-              {name:data3[3]._id,value:data3[3].total},];
+if(data3){
 
-  const data1 = [{name: "Men",quantity: data[0],amt: 2400,},
-                {name: "Women",quantity: data[1],amt: 2210,},
-                {name: 'Electronics',quantity: data[2],amt: 2290,},
-                {name: 'Jewelery',quantity: data[3],amt: 2000,}];
+  const data1 = [{name: "Men",quantity: data3[3].total,amt: 2400,},
+                {name: "Women",quantity: data3[1].total,amt: 2210,},
+                {name: 'Electronics',quantity: data3[0].total,amt: 2290,},
+                {name: 'Jewelery',quantity: data3[2].total,amt: 2000,}];
   return (
     <>
-    <div className='grid grid-cols-2 gap-4 py-10'>
-        <div className='text-center'>
-          <ResponsiveContainer width={500} height={500}>
+    <div className='grid grid-cols-2 gap-4'>
+        <div className=' col-span-2 my-5 mx-48'>
+          <ResponsiveContainer width={600} height={500}>
         <BarChart
           width={500}
           height={300}
@@ -63,12 +53,14 @@ if(data && data3){
           <XAxis dataKey="name"  />
           <YAxis />
           <Tooltip />
-          <Bar dataKey="quantity" fill="#8884d8" label={renderCustomizedLabel}/>
+          <Bar dataKey="quantity" fill="#8884d8"/>
+          
+          
         </BarChart>
       </ResponsiveContainer>
-      <h1 className='font-semibold'>category quantity bar chart</h1>
+      <h1 className='font-semibold text-center my-5'>Quantity of Products per Category</h1>
         </div>
-        {loading && <Loading />}
+        {/* {loading && <Loading />}
         {error && <ErrorFetch message="Error while fetchin productCount " /> }
         {!error && !loading && data && (
         <div className='text-center'>
@@ -93,7 +85,7 @@ if(data && data3){
                 <h1 className='font-semibold'>percentage of total prices per category</h1>
         </div>
         </div>
-        )}
+        )} */}
     </div>
     </>
   )

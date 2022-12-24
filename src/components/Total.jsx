@@ -21,7 +21,7 @@ const getTotal = () => {
         <p className='font-semibold'>Order Summary</p>
         <p className="total__p">
         total ({getTotal().totalQuantity} items) 
-        : <strong>{getTotal().totalPrice} Da</strong>
+        : <strong>{getTotal().totalPrice.toFixed(0)} Da</strong>
         </p>
     </div>
   )

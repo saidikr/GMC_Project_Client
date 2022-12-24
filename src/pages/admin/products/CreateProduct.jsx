@@ -4,7 +4,6 @@ import {useForm} from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { productSchema } from '../../../helper/validation';
 import { createProduct } from '../../../service/product.service';
-import { ToastContainer } from 'react-toastify';
 
 export const CreateProduct = () => {
     const {
@@ -66,7 +65,6 @@ export const CreateProduct = () => {
             <button className='inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-site-color  hover:text-white' >Add</button>
             </div>
         </form>
-        <ToastContainer />
     </div>
   )
 }

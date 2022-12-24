@@ -1,16 +1,22 @@
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { useState,useEffect } from 'react';
-import img1 from '../assets/carousel-1.jpg';
-import img2 from '../assets/320443029.png';
-import img3 from '../assets/5188208.jpg';
-import img4 from '../assets/luis.png';
-import img5 from '../assets/only.png';
-import img6 from '../assets/san.png';
+import img1 from '../assets/berthold.jpg';
+import img2 from '../assets/felin.jpg';
+import img3 from '../assets/denimm.jpg';
+import img9 from '../assets/jeans.jpg';
+import img4 from '../assets/only.png';
+import img10 from '../assets/san.png';
+import img7 from '../assets/really.jpg';
+import img8 from '../assets/backdenim.jpg';
+import img5 from '../assets/Cap.png';
+import img6 from '../assets/bl.jpg';
+
+
 
 
 
 function Slider2() {
-  const images = [img1, img2, img3, img4,img5,img6];
+  const images = [img1, img2, img3, img4,img5,img6,img7,img8,img9,img10];
   const [activeSlide, setActiveSlide] = useState(1);
 
   const prevSliderHandler = (index) => {

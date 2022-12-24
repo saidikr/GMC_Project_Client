@@ -8,9 +8,6 @@ const Cart = () => {
     <div className="container mx-auto sm:px-4">
     <div className='m-10'>
     <h3 className='font-extrabold text-4xl my-10 text-center'>Shopping Cart</h3>
-    <div className='mb-20 text-center'>
-    <Total/>
-    </div>
     <div className='grid grid-cols-4 gap-4'>
     {cart.map((item) => (
     <CartItem
@@ -22,6 +19,9 @@ const Cart = () => {
         quantity={item.quantity}
       />
     ))}
+    </div>
+    <div className='mt-10 text-center'>
+    <Total/>
     </div>
   </div>
 </div>

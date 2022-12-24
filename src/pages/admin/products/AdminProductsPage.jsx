@@ -5,7 +5,6 @@ import { Loading } from '../../../components/laoding';
 import { ErrorFetch } from '../../../components/error-fetch';
 import { formatDate } from '../../../helper/formatDate';
 import { deleteProduct } from '../../../service/product.service';
-import { ToastContainer } from 'react-toastify';
 
 const AdminProductsPage = () => {
   const { data, loading, error } = useFetch("/products");
@@ -63,7 +62,6 @@ const AdminProductsPage = () => {
             </tbody>
           </table>
         )}
-        <ToastContainer />
       </div>
           <a href="#" className=" fixed bottom-3 right-3 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-2 px-4 leading-normal no-underline bg-site-color text-white "><i className="fa fa-angle-double-up"></i></a>
     </div>

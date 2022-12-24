@@ -2,8 +2,6 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginSchema } from "../../helper/validation";
 import { login } from "../../service/auth.service";
-import {ToastContainer,toast} from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css';
 
 import {
   successNotification,
@@ -39,7 +37,7 @@ const LoginPage = () => {
                                 <label>Email</label>
                                 <input
                                     type="email"
-className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded mt-3"
+                                    className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded mt-3"
                                     placeholder="enter your email"
                                     {...register("email")}
                                 />
@@ -58,7 +56,6 @@ className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal 
                             <div className="mb-4 mt-3">
                                 <button className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-site-color text-black hover:text-white">login</button>
                             </div>
-                            <ToastContainer />
                         </form>
                     </div>
                 </div>

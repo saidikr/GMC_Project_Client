@@ -22,7 +22,7 @@ export const createProduct=({title,price,description,category,quantity,rating,im
             successNotification("Product Added");
             setTimeout(()=>{
                 window.location="/admin/products";
-            },3000)
+            },2000)
         }
     }).catch((err) => {
       console.log(err.response.data);
@@ -37,7 +37,7 @@ export const deleteProduct=(id)=>{
             successNotification("Product deleted");
             setTimeout(()=>{
                 window.location="/admin/products";
-            },3000)
+            },2000)
         }
     }).catch((err) => {
       console.log(err.response.data);
@@ -60,10 +60,10 @@ export const editProduct=({id,title,price,description,category,quantity,rating,i
         }
     }).then(res=>{
         if(res.status===200){
-            successNotification("Product updated succesfully");
+            successNotification("Product updated");
             setTimeout(()=>{
                 window.location="/admin/products"
-            },3000);
+            },2000);
         }
     }).catch((err) => {
       console.log(err.response.data);

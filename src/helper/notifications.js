@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const opts = {
   position: "top-center",
-  autoClose: 2000,
+  autoClose: 1000,
   hideProgressBar: false,
   closeOnClick: true,
   pauseOnHover: true,

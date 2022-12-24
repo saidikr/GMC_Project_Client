@@ -9,7 +9,7 @@ export const loginSchema = yup.object({
 });
 
 export const productSchema = yup.object({
-  title : yup.string().min(9).required(),
+  title : yup.string().min(4).required(),
   price : yup
       .number()
       .label('Rate')
