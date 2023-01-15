@@ -53,15 +53,15 @@ function Slider2() {
             key={index}
             className={
               activeSlide === index
-                ? 'flex justify-between items-center'
+                ? 'flex md:justify-between items-center relative'
                 : 'hidden'
             }
           >
             <button
-              className='text-6xl'
+              className='absolute left-10 md:text-6xl'
               onClick={() => prevSliderHandler(index)}
             >
-              <FiChevronLeft />
+              <FiChevronLeft className='text-white' />
             </button>
             <div className=' w-full h-[500px]'>
               <img
@@ -71,10 +71,10 @@ function Slider2() {
               />
             </div>
             <button
-              className='text-6xl'
+              className='absolute right-10 md:text-6xl'
               onClick={() => nextSliderHandler(index)}
             >
-              <FiChevronRight />
+              <FiChevronRight className='text-white' />
             </button>
           </div>
         );

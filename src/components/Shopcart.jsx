@@ -7,7 +7,7 @@ export const Shopcart = ({el}) => {
     const priceoff=el.price+el.price*25/100
       const navig=useNavigate()
   return (
-            <div className="max-w-sm rounded overflow-hidden shadow-lg" >
+            <div className=" w-[200px] md:w-[320px] rounded overflow-hidden shadow-lg text-center" >
             <div onClick={()=>navig(`/shopDetail/${el._id}`)}>
             <img className="w-full" src={el.image} style={{height:"290px",width:"290px"}} alt="Sunset in the mountains"/>
             <div className="flex-auto p-6 border-l border-r text-center pt-4 pb-3">

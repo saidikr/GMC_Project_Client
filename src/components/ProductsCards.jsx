@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { height, width } from '@mui/system';
 import { Item } from './Item';
 import { Shopcart } from './Shopcart';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 
 
@@ -23,15 +24,16 @@ export const ProductsCards = () => {
             </div>
         {loading && <Loading />}
         {error && <ErrorFetch message="error while fetching " />}
-        <div className="container max-w-full mx-auto p-5">
+        <div className="container max-w-full mx-auto p-5 text-center mb-10">
         {data && data.length === 0 && <h1>Not data to show</h1>}
           {!error && data && (
-            
-            <div className="grid grid-cols-4 gap-4 text-center mt-20">
+            <Scrollbars style={{ width: '170vh', height: '100vh',textAlign:'center' }} >
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mt-20">
             {data.map((el) => (
-              <Shopcart key={el._id} el={el}/>
+            <Shopcart key={el._id} el={el}/>
             ))}
             </div>
+            </Scrollbars>
           )}
         </div>
     </div>

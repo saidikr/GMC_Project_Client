@@ -19,9 +19,9 @@ const Categorytab=[
     <>
     <div className="container max-w-full mx-auto sm:px-4 pt-5">
     <div className="justify-center flex flex-wrap  xl:px-12 pb-3">
-    <div className='text-center grid grid-cols-4 gap-4'>
+    <div className='flex justify-center flex-wrap md:flex-nowrap'>
     {Categorytab.map((element)=>(
-    <div key={element.id} className="text-center border rounded-xl shadow-xl" onClick={() => navigate(`/shop/${element.path}`)}>
+    <div key={element.id} className="hover:scale-105 transition ease-out text-center p-4 border rounded-xl shadow-xl" onClick={() => navigate(`/shop/${element.path}`)}>
       <div className="flex flex-col relative">
         <a href='' className="cat-img relative overflow-hidden">
           <img className="w-full h-auto" style={{height:"350px",width:"250px"}}src={element.img} alt={`${element.name} image`} />
