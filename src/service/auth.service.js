@@ -15,7 +15,7 @@ export const login = (
         sessionStorage.setItem("token", JSON.stringify(data));
         successNotification("Login succesfully");
         setTimeout(() => {
-          window.location = "/admin";
+           window.location = "/admin";
         }, 2000);
       }
     })

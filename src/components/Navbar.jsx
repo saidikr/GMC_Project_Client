@@ -5,6 +5,8 @@ import { useLocation } from 'react-router-dom'
 import { Compare } from '../helper/compreUrlPath'
 import { Compare2 } from '../helper/compare2'
 import { useState } from 'react'
+import {MdAdminPanelSettings} from 'react-icons/md'
+
 
 export const Navbar = () => {
     const [nav, setNav] = useState(false);
@@ -13,7 +15,8 @@ export const Navbar = () => {
 
     <div>
     <nav className=' pt-2 bg-nav-top h-[40px] px-7 grid grid-cols-2 gap-1'>
-        <div>
+        <div className='flex'>
+        <Link className='text-white' to='/admin'><MdAdminPanelSettings size={25}/></Link>
         <Link className='ml-8 text-white' to='/'>FAQs</Link>
         <span className='mx-1 text-white' >|</span>
         <Link className='mx-1 text-white' to='/'>Help</Link>

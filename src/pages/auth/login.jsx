@@ -27,8 +27,8 @@ const LoginPage = () => {
   };
 
   return (
-        <div className="flex justify-center h-screen sm:px-4 bg-btn-color" >
-            <div className="w-1/3">
+        <div className="flex justify-center h-screen sm:px-4 bg-btn-color w-" >
+            <div className="w-full md:w-1/3">
                 <div className="mt-40 relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300 shadow">
                     <div className="flex-auto p-6">
                         <h3 className="text-center font-semibold ">Login</h3>

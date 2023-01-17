@@ -27,13 +27,16 @@ export const ProductsCards = () => {
         <div className="container max-w-full mx-auto p-5 text-center mb-10">
         {data && data.length === 0 && <h1>Not data to show</h1>}
           {!error && data && (
-            <Scrollbars style={{ width: '170vh', height: '100vh',textAlign:'center' }} >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mt-20">
+            <div className='h-[80vh] md:h-[150vh] w-full text-center'>
+            <Scrollbars>
+            <div className="grid grid-cols-1 md:grid-cols-4 text-center mt-20">
             {data.map((el) => (
+
             <Shopcart key={el._id} el={el}/>
             ))}
             </div>
             </Scrollbars>
+            </div>
           )}
         </div>
     </div>
