@@ -8,14 +8,14 @@ import { Vendor } from "../components/vendor"
 
 const HomePage=()=>{
     return(
-        <div>
+        <>
             <Slider2/>
             <Features/>
             <Category/>
             <Offers/>
             <ProductsCards/>
             <Vendor/>
-        </div>
+        </>
     )
 }
 

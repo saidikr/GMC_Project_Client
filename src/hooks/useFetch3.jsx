@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-// const baseUrl = "http://localhost:4000/api";
  const baseUrl = "https://myeshoppersite.onrender.com/api";
-
+ 
  
 const useFetch3 = (url) => {
   const [data3, setData] = useState(null);
