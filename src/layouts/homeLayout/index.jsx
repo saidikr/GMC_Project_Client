@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom"
 import { Footer } from "../../components/footer"
 
 
-export const HomeLayout=({children})=>{
+export const HomeLayout=()=>{
     return(
         <div>
         <Header key='1'/>

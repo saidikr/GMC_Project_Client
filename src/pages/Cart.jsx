@@ -8,7 +8,7 @@ const Cart = () => {
     <div className="container mx-auto sm:px-4">
     <div className='m-10'>
     <h3 className='font-extrabold text-4xl my-10 text-center'>Shopping Cart</h3>
-    <div className='grid grid-cols-4 gap-4'>
+    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
     {cart.map((item) => (
     <CartItem
         key={item.id}
