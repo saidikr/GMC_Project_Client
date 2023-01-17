@@ -20,7 +20,7 @@ export const ProductsCards = () => {
     <div className="container mx-auto sm:px-4 ">
             <div className="text-center mb-4 p-5">
               <h2 className="section-title px-5 mb-3"><span className="text-2xl px-2 mt-10">Stay Updated</span></h2>
-            <h2 className="section-title px-5"><span className="px-2 font-extrabold text-4xl mt-20">----Trandy Products----</span></h2>
+            <h2 className="section-title px-5"><span className="px-2 font-extrabold text-4xl mt-20">Trandy Products</span></h2>
             </div>
         {loading && <Loading />}
         {error && <ErrorFetch message="error while fetching " />}
@@ -29,7 +29,7 @@ export const ProductsCards = () => {
           {!error && data && (
             <div className='h-[80vh] md:h-[150vh] w-full text-center'>
             <Scrollbars>
-            <div className="grid grid-cols-1 md:grid-cols-4 text-center mt-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center mt-20">
             {data.map((el) => (
 
             <Shopcart key={el._id} el={el}/>

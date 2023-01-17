@@ -19,7 +19,7 @@ export const ProductsCardsShop = () => {
         {data && data.length === 0 && <h1>Not data to show</h1>}
           {!error && data && (
             
-            <div className="grid grid-cols-3 gap-4 text-center mt-20">
+            <div className="grid grid-cols-2 lg:grid-cols-2 gap-4 text-center mt-20">
               {data.map((el) => (
             <Shopcart key={el._id} el={el}/>
             ))}

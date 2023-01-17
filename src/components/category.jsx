@@ -19,7 +19,7 @@ export const Category = () => {
     <>
     <div className="container max-w-full mx-auto sm:px-4 pt-5">
     <div className="justify-center flex flex-wrap  xl:px-12 pb-3">
-    <div className='flex justify-center flex-wrap md:flex-nowrap'>
+    <div className='flex justify-center flex-wrap lg:flex-nowrap'>
     {Categorytab.map((element)=>(
     <div key={element.id} className="hover:scale-105 transition ease-out text-center p-4 border rounded-xl shadow-xl" onClick={() => navigate(`/shop/${element.path}`)}>
       <div className="flex flex-col relative">
