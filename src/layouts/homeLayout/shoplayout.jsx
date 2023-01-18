@@ -81,10 +81,10 @@ export const Shoplayout = () => {
               </p>
             </div>
             <div onClick={()=>setNav2(!nav2)} className='md:hidden m-3 cursor-pointer hover:text-white '>
-            {nav2 ? <FaTimes size={30} className='text-black hover:text-white' /> : <FaBars size={30} className='text-black hover:text-white' />}
+            {nav2 ? <FaTimes size={30} className='text-black hover:text-white absolute top-0 left-3' /> : <FaBars size={30} className='text-white hover:text-black' />}
             {nav2 && 
                 (
-                <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-site-color text-black'>
+                <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-site-color text-black z-50'>
                 <li
                 className="mb-0 p-3 font-semibold text-4xl hover:text-white"
               >

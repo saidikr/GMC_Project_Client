@@ -35,7 +35,7 @@ if(data3){
   return (
     <>
     <div className='grid grid-cols-2 gap-4'>
-        <div className=' col-span-2 my-5 mx-48'>
+        <div className=' col-span-2 my-5 md:mx-48'>
           <ResponsiveContainer width={600} height={500}>
         <BarChart
           width={500}
