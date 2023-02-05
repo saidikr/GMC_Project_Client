@@ -45,8 +45,8 @@ export const Navbar = () => {
     </nav>
     <div className='headercolor py-3 px-4 flex justify-between items-center w-full h-20 text-white sticky top-0 z-50'>
       <div className='flex ml-8' >
-        <a href=""><button className='py-2 px-4 text-4xl border font-bold text-site-color border-solid' >E</button></a>
-        <h1 className='p-2 font-bold text-4xl'>Shopper</h1>
+        <a href=""><button className='py-2 px-4 text-4xl border font-bold text-site-color border-solid' >W</button></a>
+        <h1 className='p-2 font-bold text-4xl'>Kaufer</h1>
       </div>
         <ul className="hidden md:flex text-black text-xl">
           <li>
